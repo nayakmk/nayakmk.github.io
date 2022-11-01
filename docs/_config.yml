@@ -29,7 +29,7 @@ twitter_username: malayaofficial
 github_username:  nayakmk
 
 # Build settings
-theme: minima
+theme: jekyll-theme-chirpy
 plugins:
   - jekyll-feed
 
