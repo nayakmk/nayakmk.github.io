@@ -1,21 +1,5 @@
-# hidden files
-.*
-!.git*
-!.editorconfig
-!.nojekyll
-!.travis.yml
-!.husky
-!.commitlintrc.json
-!.versionrc.json
-!.stylelintrc.json
-
-# bundler cache
 _site
-vendor
-
-# rubygem
-*.gem
-
-# npm dependencies
+.sass-cache
+.jekyll-metadata
 node_modules
-package-lock.json
+Gemfile.lock
