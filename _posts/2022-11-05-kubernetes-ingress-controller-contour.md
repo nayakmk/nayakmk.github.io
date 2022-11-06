@@ -36,7 +36,7 @@ t/contour.yaml
 
 ## Example Project
 
-Instructions to follow: https://alankrantas.medium.com/trying-out-kubernetes-gateway-api-beta-using-contour-with-kind-b5a6491096c1
+Instructions to follow: [Using KinD and Contour for Ingress](https://alankrantas.medium.com/trying-out-kubernetes-gateway-api-beta-using-contour-with-kind-b5a6491096c1) 
 
 ### Deployment
 
