@@ -161,3 +161,5 @@ If you want to know if the Ingress is misconfigured or configured properly then 
 ### Test Service
 
 http://localhost:8080/echo
+
+> You can find the associated files in repo: https://github.com/nayakmk/Kind/tree/main/Contour
