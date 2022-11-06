@@ -2,6 +2,8 @@
 layout: post
 title: Kubernetes Ingress Controller - Contour
 date: '2022-11-05 18:46:09 +0530'
+categories: [KUBERNETES, CLOUD]
+tags: [k8s, ingress]     # TAG names should always be lowercase
 ---
 # Kubernetes Ingress Controller - Contour
 
