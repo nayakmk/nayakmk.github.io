@@ -5,16 +5,38 @@ date: '2022-11-05 18:46:09 +0530'
 ---
 # Kubernetes Ingress Controller - Contour
 
-## Getting Started
+## What is Ingress
 
-### Contour Setup
+Ingress is an API object that manages external access to the services in a cluster, typically HTTP.
+
+Ingress may provide load balancing, SSL termination and name-based virtual hosting.
+
+Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
+
+![alt](https://d33wubrfki0l68.cloudfront.net/91ace4ec5dd0260386e71960638243cf902f8206/c3c52/docs/images/ingress.svg)
+
+## What is Ingress Controller
+
+An Ingress controller is responsible for fulfilling the Ingress, usually with a load balancer, though it may also configure your edge router or additional frontends to help handle the traffic.
+
+Ingress objects refer to allowing HTTP or HTTPS traffic through to your cluster services. They do not expose other ports or protocols to the wider world. For this, a service type of LoadBalancer or NodePort should be used.
+
+A service is an external interface to a logical set of Pods. Services use a ‘virtual IP address’ local to the cluster, external services would have no way to access these IP addresses without an Ingress.
+
+## Contour Setup
+
+Contour is an open source Kubernetes ingress controller providing the control plane for the Envoy edge and service proxy.
 
 > kubectl apply -f https://projectcontour.io/quickstar
 t/contour.yaml
+
 > kubectl get pods -n projectcontour -o wide --watch
+
 > kubectl get svc -n projectcontour
 
 ## Example Project
+
+Instructions to follow: https://alankrantas.medium.com/trying-out-kubernetes-gateway-api-beta-using-contour-with-kind-b5a6491096c1
 
 ### Deployment
 
@@ -129,6 +151,8 @@ spec:
 ```
 
 #### Describe HTTPProxy
+
+If you want to know if the Ingress is misconfigured or configured properly then you can describe it and see the details.
 
 > kubectl describe httpproxy basic
 
