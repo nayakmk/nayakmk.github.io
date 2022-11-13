@@ -2,6 +2,8 @@
 layout: post
 title: 'Liquibase: Using Init Container'
 date: '2022-11-13 23:02:42 +0530'
+categories: [KUBERNETES, JAVA]
+tags: [k8s, spring-boot, docker, liquibase]
 ---
 
 ## Approach 1: 

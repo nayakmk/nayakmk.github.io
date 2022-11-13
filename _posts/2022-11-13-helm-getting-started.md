@@ -2,6 +2,8 @@
 layout: post
 title: 'Helm: Getting Started'
 date: '2022-11-13 21:59:16 +0530'
+categories: [KUBERNETES]
+tags: [k8s, helm, minikube]
 ---
 ## Helm Installation
 
