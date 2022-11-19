@@ -41,7 +41,7 @@ To make baggage also tags, use the property `spring.sleuth.baggage.tag-fields`
 
 ### Example Implementation
 
-https://github.com/nayakmk/tracing-jaeger-k8s
+https://github.com/nayakmk/tracing-jaeger-k8s/tree/spring-cloud-sleuth
 
 ## Further Reading
 
