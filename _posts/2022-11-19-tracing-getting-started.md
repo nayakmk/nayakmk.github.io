@@ -45,8 +45,8 @@ https://github.com/nayakmk/tracing-jaeger-k8s/tree/spring-cloud-sleuth
 
 ## Further Reading
 
-https://signoz.io/blog/distributed-tracing-span/
-https://ryanharrison.co.uk/2021/08/06/distributed-tracing-spring-boot-jaeger.html
-https://docs.spring.io/spring-cloud-sleuth/docs/current-SNAPSHOT/reference/html/project-features.html
-https://github.com/openzipkin/brave/tree/master/brave#using-baggagefield
-https://developers.ascendcorp.com/passing-http-headers-to-another-microservice-and-put-them-to-the-log-programmatically-using-spring-91ae60126c6f
+1. https://signoz.io/blog/distributed-tracing-span/
+2. https://ryanharrison.co.uk/2021/08/06/distributed-tracing-spring-boot-jaeger.html
+3. https://docs.spring.io/spring-cloud-sleuth/docs/current-SNAPSHOT/reference/html/project-features.html
+4. https://github.com/openzipkin/brave/tree/master/brave#using-baggagefield
+5. https://developers.ascendcorp.com/passing-http-headers-to-another-microservice-and-put-them-to-the-log-programmatically-using-spring-91ae60126c6f
