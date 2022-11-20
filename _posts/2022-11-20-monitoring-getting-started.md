@@ -35,7 +35,8 @@ https://github.com/nayakmk/monitoring-prometheus-grafana-k8s
 
 There are lot of metrics aggregation systems which can be integrated and above was an example of that. The complete list of metrics systems and their integration you can find below.
 
-![alt](./images/metrics.png)
+![Metrics View](/assets/img/metrics.png){: .normal }
+
 
 ## Further Reading
 
