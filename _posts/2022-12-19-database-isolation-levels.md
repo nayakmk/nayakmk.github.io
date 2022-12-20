@@ -5,6 +5,8 @@ date: '2022-12-19 14:43:23 +0530'
 ---
 ### Read Phenomena in Concurrent Transactions
 
+When a lot of transactions are trying to update the same resource in parallel, then as a result of the updates performed against DB, some anomalies or phenomena can occur as below.
+
 #### Loss of Data
 
 If the two transactions want to change the same columns, the second transaction will overwrite the first one, therefore losing the first transaction update. So **an update is lost when a user overrides the current database state without realizing that someone else changed it between the moment of data loading and the moment the update** occurs.
@@ -26,6 +28,8 @@ Phantom Read occurs when **two same queries are executed, but the rows retrieved
 Serialization anomaly means that the result of successfully committing a group of transactions is inconsistent with all possible orderings of running those transactions one at a time.
 
 ### DB Isolation Levels
+
+In order to avoid the above anomalies, the DB supports following isolation levels to guarantee to avoid the transaction anomalies.
 
 #### Read Uncommitted
 
@@ -58,8 +62,6 @@ This is the Highest isolation level. A serializable execution is guaranteed to b
 
 ### Further Reading
 
-https://www.postgresql.org/docs/13/transaction-iso.html
-
-https://levelup.gitconnected.com/understanding-isolation-levels-in-a-database-transaction-af78aea3f44
-
-https://mkdev.me/posts/transaction-isolation-levels-with-postgresql-as-an-example
+1. https://www.postgresql.org/docs/13/transaction-iso.html
+2. https://levelup.gitconnected.com/understanding-isolation-levels-in-a-database-transaction-af78aea3f44
+3. https://mkdev.me/posts/transaction-isolation-levels-with-postgresql-as-an-example
