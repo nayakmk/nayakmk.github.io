@@ -2,6 +2,8 @@
 layout: post
 title: 'Database Concepts: Isolation'
 date: '2022-12-19 14:43:23 +0530'
+categories: [DISTRIBUTED, DATABASE]
+tags: [isolation, database, consistency]
 ---
 ### Read Phenomena in Concurrent Transactions
 
