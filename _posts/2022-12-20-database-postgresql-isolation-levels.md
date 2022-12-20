@@ -49,7 +49,7 @@ COMMIT
 
 ### Read Un-Committed Example
 
-```false
+```sql
 psql> set transaction isolation level read uncommitted;
 SET
 
@@ -62,7 +62,7 @@ transaction_isolation
 
 ### Read Committed Example
 
-```false
+```sql
 psql> set transaction isolation level read committed;
 SET
 
@@ -79,7 +79,7 @@ Dirty read is not possible in this isolation but we can see phantom read.
 
 To avoid phantom read, we can enable this isolation, which ensures that the other transaction sees the same data upon repeated query as the state before the transaction began.
 
-```false
+```sql
 psql> set transaction isolation level repeatable read;
 SET
 
@@ -98,7 +98,7 @@ ERROR: could not serialize access due to concurrent update
 
 ### Serializable
 
-```false
+```sql
 psql> set transaction isolation level serializable;
 SET
 
