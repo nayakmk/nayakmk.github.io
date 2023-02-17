@@ -83,4 +83,61 @@ e. 10.0.1.255 : Used for Broadcast
 
 
 
-So the IP address which we can use is 10.0.1.4 to 10.0.1.254
+So the IP address which we can use is 10.0.1.4 to 10.0.1.254.
+
+### Network Access Control List (NACL)
+
+Amazon VPC Network Access Control Lists (NACLs) are an optional layer of security for your VPC that act as a firewall for controlling traffic in and out of one or more subnets. **NACLs provide an additional level of security for your resources by allowing you to define rules that control the traffic to and from your subnets**.
+
+NACLs are stateless, which means that they do not track the connection state of incoming and outgoing network traffic, and they do not provide features such as load balancing or routing. Instead, NACLs simply allow or deny traffic based on the rules that you define.
+
+NACLs operate at the **subnet** level, and you can associate one or more subnets with a NACL. Each **subnet must be associated with one and only one NACL**. When you create a subnet, it is automatically associated with the default NACL, which allows all traffic. You can then create custom rules for the NACL to control the traffic to and from the subnet.
+
+When you create a NACL, you specify the rules for incoming and outgoing traffic. Each rule has a rule number, and the rules are processed in ascending order. You can create up to 20 inbound and 20 outbound rules per NACL.
+
+To use NACLs, you simply create the NACL and define the rules, and then associate the NACL with the desired subnets. You can use the AWS Management Console, AWS CLI, or the AWS SDKs to create and manage NACLs.
+
+NACLs are an important security tool for controlling access to your resources in a VPC. They complement security groups, which are stateful and provide more advanced features such as load balancing and routing. By using both NACLs and security groups, you can create a multi-layered security system for your VPC that provides robust protection for your resources.
+
+#### Rules
+
+Amazon VPC Network Access Control Lists (NACLs) use rules to control the traffic in and out of a VPC subnet. Each NACL rule consists of the following elements:
+
+1. Rule Number: The rule number determines the order in which the rules are processed. Rules are processed in ascending order, starting with the lowest rule number.
+2. Rule Action: The rule action specifies whether to allow or deny traffic that matches the rule.
+3. Protocol: The protocol specifies the type of network traffic that the rule applies to, such as TCP, UDP, or ICMP.
+4. Port Range: The port range specifies the range of TCP or UDP ports that the rule applies to.
+5. Source IP Range: The source IP range specifies the range of IP addresses that are allowed to initiate traffic to the subnet. You can specify a specific IP address or a range of IP addresses.
+6. Target: The target is the subnet associated with the NACL.
+
+#### Default NACL
+
+The **default network ACL** is configured to allow all traffic to flow in and out of the subnets with which it is associated. Each network ACL also includes a rule whose rule number is an asterisk. This rule ensures that if a packet doesn't match any of the other numbered rules, it's denied. You can't modify or remove this rule. 
+
+| **Inbound**  |                  |              |                |                 |                |
+| ------------ | ---------------- | ------------ | -------------- | --------------- | -------------- |
+| **Rule #**   | **Type**         | **Protocol** | **Port range** | **Source**      | **Allow/Deny** |
+| 100          | All IPv4 traffic | All          | All            | 0.0.0.0/0       | ALLOW          |
+| *            | All IPv4 traffic | All          | All            | 0.0.0.0/0       | DENY           |
+| **Outbound** |                  |              |                |                 |                |
+| **Rule #**   | **Type**         | **Protocol** | **Port range** | **Destination** | **Allow/Deny** |
+| 100          | All IPv4 traffic | All          | All            | 0.0.0.0/0       | ALLOW          |
+| *            | All IPv4 traffic | All          | All            | 0.0.0.0/0       | DENY           |
+
+#### Custom NACL - Example
+
+| **Rule #**   | **Type**    | **Protocol** | **Port range** | **Source**      | **Allow/Deny** | **Comments**                                                 |
+| ------------ | ----------- | ------------ | -------------- | --------------- | -------------- | ------------------------------------------------------------ |
+| 100          | HTTP        | TCP          | 80             | 0.0.0.0/0       | ALLOW          | Allows inbound HTTP traffic from any IPv4 address.           |
+| 110          | HTTPS       | TCP          | 443            | 0.0.0.0/0       | ALLOW          | Allows inbound HTTPS traffic from any IPv4 address.          |
+| 120          | SSH         | TCP          | 22             | 192.0.2.0/24    | ALLOW          | Allows inbound SSH traffic from your home network's public IPv4 address range (over the internet gateway). |
+| 130          | RDP         | TCP          | 3389           | 192.0.2.0/24    | ALLOW          | Allows inbound RDP traffic to the web servers from your home network's public IPv4 address range (over the internet gateway). |
+| 140          | Custom TCP  | TCP          | 32768-65535    | 0.0.0.0/0       | ALLOW          | Allows inbound return IPv4 traffic from the internet (that is, for requests that originate in the subnet).This range is an example only. For more information about how to select the appropriate ephemeral port range, see [Ephemeral ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html?ref=wellarchitected#nacl-ephemeral-ports). |
+| *            | All traffic | All          | All            | 0.0.0.0/0       | DENY           | Denies all inbound IPv4 traffic not already handled by a preceding rule (not modifiable). |
+| **Outbound** |             |              |                |                 |                |                                                              |
+| **Rule #**   | **Type**    | **Protocol** | **Port range** | **Destination** | **Allow/Deny** | **Comments**                                                 |
+| 100          | HTTP        | TCP          | 80             | 0.0.0.0/0       | ALLOW          | Allows outbound IPv4 HTTP traffic from the subnet to the internet. |
+| 110          | HTTPS       | TCP          | 443            | 0.0.0.0/0       | ALLOW          | Allows outbound IPv4 HTTPS traffic from the subnet to the internet. |
+| 120          | SSH         | TCP          | 1024-65535     | 192.0.2.0/24    | ALLOW          | Allows outbound SSH traffic from your home network's public IPv4 address range (over the internet gateway). |
+| 140          | Custom TCP  | TCP          | 32768-65535    | 0.0.0.0/0       | ALLOW          | Allows outbound IPv4 responses to clients on the internet (for example, serving webpages to people visiting the web servers in the subnet).This range is an example only. For more information about how to select the appropriate ephemeral port range, see [Ephemeral ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html?ref=wellarchitected#nacl-ephemeral-ports). |
+| *            | All traffic | All          | All            | 0.0.0.0/0       | DENY           | Denies all outbound IPv4 traffic not already handled by a preceding rule (not modifiable). |
