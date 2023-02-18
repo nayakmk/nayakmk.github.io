@@ -39,11 +39,71 @@ Like trace IDs, Baggage is attached to messages or requests, usually as headers.
 
 To make baggage also tags, use the property `spring.sleuth.baggage.tag-fields`
 
-### Example Implementation
+### Sample Traces
 
-1.  Using Spring Sleuth, Zipkin and Jaeger https://github.com/nayakmk/tracing-jaeger-sleuth-k8s
-2. Using Spring and Opentelemetry. https://github.com/nayakmk/tracing-jaeger-opentelemetry-k8s
-3. Using Spring Sleuth and OpenTelemetry and Jaeger https://github.com/nayakmk/tracing-jaeger-opentelemetry-kafka-k8s
+#### Jaeger
+
+![Traces](../assets/img/jaeger-tracing.png)
+
+![Custom Spans and Tags](../assets/img/jaeger-tracing-custom-spans-events.png)
+
+#### Datadog
+
+
+![Custom Spans and Tags](../assets/img/datadog-tracing.png)
+
+### Example Implementations
+
+1. Using Spring Sleuth, Zipkin, Brave and Jaeger: 
+    ```
+    implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
+    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
+    implementation 'io.opentracing.brave:brave-opentracing'
+    ```
+    https://github.com/nayakmk/tracing-jaeger-sleuth-zipkin-k8s
+
+2. Using Spring and Opentelemetry Libraries: 
+    ```
+     implementation 'io.opentracing:opentracing-api:0.33.0'
+     implementation 'io.opentracing.contrib:opentracing-spring-cloud-starter:0.5.9'
+     implementation 'io.jaegertracing:jaeger-client:1.8.1'
+    ```
+    https://github.com/nayakmk/tracing-jaeger-opentelemetry-k8s
+
+3. Using Spring Sleuth and OpenTelemetry and Jaeger using OTLP 
+    ```
+    implementation('org.springframework.cloud:spring-cloud-starter-sleuth') {
+    	exclude group: 'org.springframework.cloud', module: 'spring-cloud-sleuth-brave' //  We want to exclude the default tracer coming from Sleuth...
+    }
+    implementation 'org.springframework.cloud:spring-cloud-sleuth-otel-autoconfigure'
+    implementation 'io.opentelemetry:opentelemetry-exporter-otlp-trace'
+    implementation 'io.grpc:grpc-okhttp:1.50.0'
+    ```
+    https://github.com/nayakmk/tracing-sleuth-jaeger-otel-otlp-kafka-k8s
+
+4. Using Spring Sleuth, OpenTelemetry and Jaeger using Jaeger Collector
+    ```
+    	implementation('org.springframework.cloud:spring-cloud-starter-sleuth') {
+    	exclude group: 'org.springframework.cloud', module: 'spring-cloud-sleuth-brave' //  We want to exclude the default tracer coming from Sleuth...
+    }
+    implementation 'org.springframework.cloud:spring-cloud-sleuth-otel-autoconfigure'
+    implementation "io.opentelemetry:opentelemetry-exporter-jaeger"
+    implementation 'io.grpc:grpc-netty:1.53.0'
+    ```
+    https://github.com/nayakmk/tracing-sleuth-jaeger-otel-kafka-k8s
+
+5. Using Spring Sleuth, OpenTelemetry, and Datadog using OTLP collector
+
+    ```
+    	implementation('org.springframework.cloud:spring-cloud-starter-sleuth') {
+    		exclude group: 'org.springframework.cloud', module: 'spring-cloud-sleuth-brave'
+    	}
+    	implementation 'org.springframework.cloud:spring-cloud-sleuth-otel-autoconfigure'
+    	implementation 'io.opentelemetry:opentelemetry-exporter-otlp-trace'
+    	implementation 'io.grpc:grpc-okhttp:1.50.0'
+    ```
+
+    https://github.com/nayakmk/tracing-sleuth-datadog-otel-otlp-kafka-k8s
 
 ## Further Reading
 
