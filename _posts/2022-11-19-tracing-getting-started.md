@@ -41,11 +41,9 @@ To make baggage also tags, use the property `spring.sleuth.baggage.tag-fields`
 
 ### Example Implementation
 
-https://github.com/nayakmk/tracing-jaeger-sleuth-k8s
-
-> Simillar implementation is also done using Opentelemetry.
-
-https://github.com/nayakmk/tracing-jaeger-opentelemetry-k8s
+1.  Using Spring Sleuth, Zipkin and Jaeger https://github.com/nayakmk/tracing-jaeger-sleuth-k8s
+2. Using Spring and Opentelemetry. https://github.com/nayakmk/tracing-jaeger-opentelemetry-k8s
+3. Using Spring Sleuth and OpenTelemetry and Jaeger https://github.com/nayakmk/tracing-jaeger-opentelemetry-kafka-k8s
 
 ## Further Reading
 
