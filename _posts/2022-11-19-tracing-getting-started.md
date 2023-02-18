@@ -105,6 +105,11 @@ To make baggage also tags, use the property `spring.sleuth.baggage.tag-fields`
 
     https://github.com/nayakmk/tracing-sleuth-datadog-otel-otlp-kafka-k8s
 
+### Sleuth to Micrometer Migration
+
+https://openvalue.blog/posts/2022/12/16/tracing-in-spring-boot-2-and-3/
+
+
 ## Further Reading
 
 1. https://signoz.io/blog/distributed-tracing-span/
