@@ -3,7 +3,7 @@ layout: post
 title: 'Tracing: Getting Started'
 date: '2022-11-19 16:01:08 +0530'
 categories: [DISTRIBUTED, TRACING]
-tags: [tracing, spring-boot, java, sleuth]
+tags: [tracing, spring-boot, java, sleuth, opentelemetry, zipkin, jaeger, datadog, otlp, otel]
 ---
 ## Terminology
 
@@ -43,14 +43,14 @@ To make baggage also tags, use the property `spring.sleuth.baggage.tag-fields`
 
 #### Jaeger
 
-![Traces](../assets/img/jaeger-tracing.png)
+![Traces](/assets/img/jaeger-tracing.png)
 
-![Custom Spans and Tags](../assets/img/jaeger-tracing-custom-spans-events.png)
+![Custom Spans and Tags](/assets/img/jaeger-tracing-custom-spans-events.png)
 
 #### Datadog
 
 
-![Custom Spans and Tags](../assets/img/datadog-tracing.png)
+![Custom Spans and Tags](/assets/img/datadog-tracing.png)
 
 ### Example Implementations
 
@@ -112,3 +112,4 @@ To make baggage also tags, use the property `spring.sleuth.baggage.tag-fields`
 3. https://docs.spring.io/spring-cloud-sleuth/docs/current-SNAPSHOT/reference/html/project-features.html
 4. https://github.com/openzipkin/brave/tree/master/brave#using-baggagefield
 5. https://developers.ascendcorp.com/passing-http-headers-to-another-microservice-and-put-them-to-the-log-programmatically-using-spring-91ae60126c6f
+6. https://betterprogramming.pub/distributed-tracing-with-opentelemetry-and-datadog-712f8f4d520b

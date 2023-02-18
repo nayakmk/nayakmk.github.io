@@ -2,6 +2,8 @@
 layout: post
 title: 'Datadog: Getting Started'
 date: '2023-02-18 20:52:34 +0530'
+categories: [DISTRIBUTED,TRACING]
+tags: [tracing, datadog]
 ---
 
 ### Installation
@@ -10,8 +12,8 @@ In order to view the traces in Datadog, you can create a trial account by visiti
 
 For this setup, I have choosen the option of Windows Desktop for agent installation. Once installed and the agent is active, you would see your host appearing as below. ( Note: you would need key to send data to Datadog)
 
-![alt](../assets/img/datadog-agent.png)
+![Datadog Agents](/assets/img/datadog-agent.png)
 
 ### Datadog Traces
 
-![alt](../assets/img/datadog-tracing.png)
+![Datadog Traces](/assets/img/datadog-tracing.png)
