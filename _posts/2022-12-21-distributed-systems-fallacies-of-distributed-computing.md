@@ -125,5 +125,5 @@ Additionally, heterogeneity can also introduce security vulnerabilities and make
 
 ### Further Reading
 
-https://architecturenotes.co/fallacies-of-distributed-systems/
-https://www.linkedin.com/pulse/distributed-system-design-patterns-irfan-muhammad/?trk=pulse-article
+1. https://architecturenotes.co/fallacies-of-distributed-systems/
+2. https://www.linkedin.com/pulse/distributed-system-design-patterns-irfan-muhammad/?trk=pulse-article
