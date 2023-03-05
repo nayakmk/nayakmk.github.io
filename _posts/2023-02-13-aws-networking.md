@@ -2,6 +2,8 @@
 layout: post
 title: 'AWS: Networking'
 date: '2023-02-13 07:47:22 +0530'
+categories: [AWS]
+tags: [aws, networking]
 ---
 
 ## AWS Networking
@@ -295,3 +297,15 @@ The main benefits of using CloudFront in AWS include:
 AWS provides a number of options for setting up and managing CloudFront, including using the AWS Management Console, the AWS CLI, or the AWS SDKs. CloudFront is a pay-as-you-go service, and pricing is based on the amount of data transferred and other factors.
 
 The specific implementation of CloudFront will depend on your use case and requirements for performance, scalability, and security. CloudFront is commonly used for web and mobile applications, video streaming, and content delivery, and can be integrated with other AWS services, such as S3, EC2, and Lambda.
+
+### AWS Elastic IP (EIP)
+
+Amazon Web Services (AWS) Elastic IP addresses are **static**, public IPv4 addresses that you can allocate to your AWS account and associate with your instances, network interfaces, and load balancers in a specific region. Here are some of the options you have when working with Elastic IPs:
+
+1. Allocate an Elastic IP address: You can allocate an Elastic IP address to your AWS account from the AWS Management Console, AWS CLI, or AWS SDKs. You can then associate the Elastic IP address with your instances or network interfaces.
+2. Associate an Elastic IP address: You can associate an Elastic IP address with your instances, network interfaces, or load balancers. This allows you to have a fixed public IP address that stays the same even if you stop and start your instances or replace them with new ones.
+3. Release an Elastic IP address: You can release an Elastic IP address when you no longer need it. This frees up the address for someone else to use and reduces your costs since you are charged for Elastic IP addresses that are not associated with a running instance.
+4. Reallocate a released Elastic IP address: If you release an Elastic IP address and later want to use it again, you can reallocate it to your AWS account. However, you may not be able to get the same Elastic IP address back if someone else has already allocated it.
+5. Use Elastic IP addresses with NAT gateway: You can use Elastic IP addresses with a NAT gateway to enable instances in a private subnet to access the internet. The NAT gateway acts as a bridge between your private subnet and the internet, allowing your instances to communicate with the outside world while remaining hidden from the public internet.
+6. Use Elastic IP addresses with Network Load Balancers: You can use Elastic IP addresses with Network Load Balancers to provide a fixed IP address for your application that can route traffic to your instances in multiple Availability Zones.
+7. Use Elastic IP addresses with AWS Transit Gateway: You can use Elastic IP addresses with AWS Transit Gateway to enable communication between VPCs and remote networks using VPN or Direct Connect connections.
