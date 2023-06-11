@@ -2,7 +2,7 @@
 layout: post
 title: 'Functional Java: Stream Functions'
 date: '2023-06-11 14:17:10 +0530'
-categories: [FUNCTIONAL,JAVA]
+categories: [JAVA,FUNCTIONAL]
 tags: [functional, java]
 ---
 

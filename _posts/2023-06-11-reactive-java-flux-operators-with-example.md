@@ -2,7 +2,7 @@
 layout: post
 title: 'Reactive Java: Flux - Operators with Example'
 date: '2023-06-11 14:00:17 +0530'
-categories: [REACTIVE,JAVA]
+categories: [JAVA,REACTIVE]
 tags: [reactive, java]
 ---
 

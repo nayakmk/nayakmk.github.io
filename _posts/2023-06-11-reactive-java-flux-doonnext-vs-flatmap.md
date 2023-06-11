@@ -2,7 +2,7 @@
 layout: post
 title: 'Reactive Java: Flux - doOnNext vs flatMap'
 date: '2023-06-11 13:55:55 +0530'
-categories: [REACTIVE,JAVA]
+categories: [JAVA,REACTIVE]
 tags: [reactive, java]
 ---
 

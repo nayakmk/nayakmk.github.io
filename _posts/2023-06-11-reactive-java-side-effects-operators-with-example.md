@@ -2,6 +2,8 @@
 layout: post
 title: 'Reactive Java: Side-effects Operators with Example'
 date: '2023-06-11 14:32:50 +0530'
+categories: [JAVA,REACTIVE]
+tags: [reactive, java]
 ---
 
 In Reactive Java, there are several side-effect operators available that allow you to perform actions or introduce side-effects at different points in the reactive stream. Here are some commonly used side-effect operators:

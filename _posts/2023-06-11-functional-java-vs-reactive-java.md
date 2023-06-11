@@ -2,7 +2,7 @@
 layout: post
 title: Functional Java vs Reactive Java
 date: '2023-06-11 13:06:27 +0530'
-categories: [FUNCTIONAL,JAVA]
+categories: [JAVA,FUNCTIONAL]
 tags: [functional, java]
 ---
 

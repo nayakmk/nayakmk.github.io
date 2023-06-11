@@ -2,7 +2,7 @@
 layout: post
 title: 'Reactive Java: Concepts with Example'
 date: '2023-06-11 13:11:19 +0530'
-categories: [REACTIVE,JAVA]
+categories: [JAVA,REACTIVE]
 tags: [reactive, java]
 ---
 

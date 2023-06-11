@@ -2,7 +2,7 @@
 layout: post
 title: 'Functional Java: Various Function Types'
 date: '2023-06-11 12:43:20 +0530'
-categories: [FUNCTIONAL,JAVA]
+categories: [JAVA,FUNCTIONAL]
 tags: [functional, java]
 ---
 
