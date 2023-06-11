@@ -4,8 +4,6 @@ title: 'Functional Java: Stream Functions'
 date: '2023-06-11 14:17:10 +0530'
 ---
 
-## Functional Java: Stream Functions
-
 In Java, the `java.util.stream` package provides a set of functional interfaces and methods to work with streams, which allow for efficient processing of collections and arrays in a declarative and functional style. Here are some commonly used stream functions in Java:
 
 ### `map`

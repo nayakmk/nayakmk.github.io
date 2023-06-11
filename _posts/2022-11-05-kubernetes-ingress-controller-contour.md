@@ -5,8 +5,6 @@ date: '2022-11-05 18:46:09 +0530'
 categories: [KUBERNETES]
 tags: [k8s, ingress, networking]
 ---
-# Kubernetes Ingress Controller - Contour
-
 ## What is Ingress
 
 Ingress is an API object that manages external access to the services in a cluster, typically HTTP.
