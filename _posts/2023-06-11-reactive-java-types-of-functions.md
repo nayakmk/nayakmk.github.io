@@ -2,6 +2,8 @@
 layout: post
 title: 'Reactive Java: Types of Functions'
 date: '2023-06-11 13:10:04 +0530'
+categories: [REACTIVE,JAVA]
+tags: [reactive, java]
 ---
 
 ## Types of Functions

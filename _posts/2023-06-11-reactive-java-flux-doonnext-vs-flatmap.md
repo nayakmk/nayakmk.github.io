@@ -2,6 +2,8 @@
 layout: post
 title: 'Reactive Java: Flux - doOnNext vs flatMap'
 date: '2023-06-11 13:55:55 +0530'
+categories: [REACTIVE,JAVA]
+tags: [reactive, java]
 ---
 
 `doOnNext` and `flatMap` are two different operators in Reactive Java, specifically in the context of the Project Reactor library. Here's an explanation of each operator and their differences:

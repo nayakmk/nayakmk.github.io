@@ -2,6 +2,8 @@
 layout: post
 title: 'Reactive Java: Concepts with Example'
 date: '2023-06-11 13:11:19 +0530'
+categories: [REACTIVE,JAVA]
+tags: [reactive, java]
 ---
 
 Reactive programming is a programming paradigm that focuses on asynchronous and event-driven programming to handle and process streams of data. In Java, several concepts are associated with reactive programming. Here are some key reactive concepts in Java:

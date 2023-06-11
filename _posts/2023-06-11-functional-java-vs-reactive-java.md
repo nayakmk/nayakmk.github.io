@@ -2,6 +2,8 @@
 layout: post
 title: Functional Java vs Reactive Java
 date: '2023-06-11 13:06:27 +0530'
+categories: [FUNCTIONAL,JAVA]
+tags: [functional, java]
 ---
 
 Functional Java and Reactive Java (also known as Reactive Programming) are two different paradigms within the Java programming language. While there can be some overlap in their concepts and techniques, they have distinct focuses and goals. Let's explore the differences between Functional Java and Reactive Java:
