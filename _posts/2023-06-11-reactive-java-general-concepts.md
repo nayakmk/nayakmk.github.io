@@ -12,17 +12,240 @@ Reactive programming is a programming paradigm that focuses on asynchronous and 
 
 A `Publisher` is a source of data in the reactive programming model. It emits a stream of items, often asynchronously, to one or more subscribers. The `Publisher` interface is part of the Reactive Streams specification and is a fundamental building block for reactive programming in Java.
 
+A `Publisher` emits a stream of events or values over time. Here are some examples of reactive Java `Publisher` implementations:
+
+#### Flux
+
+The `Flux` class from the Reactor library is a reactive `Publisher` that emits zero or more elements over time. It can emit elements synchronously or asynchronously.
+
+```java
+import reactor.core.publisher.Flux;
+
+public class FluxExample {
+    public static void main(String[] args) {
+        Flux<Integer> numbers = Flux.just(1, 2, 3, 4, 5);
+
+        numbers.subscribe(System.out::println);
+    }
+}
+```
+
+#### Mono
+
+The `Mono` class from the Reactor library is a reactive `Publisher` that emits at most one element over time. It represents a single-value or empty sequence.
+
+```java
+import reactor.core.publisher.Mono;
+
+public class MonoExample {
+    public static void main(String[] args) {
+        Mono<String> greeting = Mono.just("Hello, World!");
+
+        greeting.subscribe(System.out::println);
+    }
+}
+```
+
+#### Custom Publisher
+
+You can also create your custom `Publisher` by implementing the `Publisher` interface. Here's an example of a simple custom `Publisher`:
+
+```java
+import java.util.concurrent.Flow.*;
+
+public class CustomPublisherExample implements Publisher<String> {
+
+    @Override
+    public void subscribe(Subscriber<? super String> subscriber) {
+        subscriber.onSubscribe(new Subscription() {
+            @Override
+            public void request(long n) {
+                subscriber.onNext("Hello");
+                subscriber.onNext("World");
+                subscriber.onComplete();
+            }
+
+            @Override
+            public void cancel() {
+                // Handle cancellation
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        CustomPublisherExample publisher = new CustomPublisherExample();
+        publisher.subscribe(new Subscriber<String>() {
+            @Override
+            public void onSubscribe(Subscription subscription) {
+                subscription.request(Long.MAX_VALUE);
+            }
+
+            @Override
+            public void onNext(String item) {
+                System.out.println(item);
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                // Handle error
+            }
+
+            @Override
+            public void onComplete() {
+                System.out.println("Completed");
+            }
+        });
+    }
+}
+```
+
+In this example, the custom `Publisher` emits "Hello" and "World" as elements and completes the stream.
+
 ### Subscriber
 
 A `Subscriber` is a consumer of data in the reactive programming model. It subscribes to a `Publisher` to receive items emitted by the `Publisher`. The `Subscriber` interface defines methods for handling emitted items, errors, and completion signals.
 
+A `Subscriber` is responsible for consuming and processing the data emitted by a `Publisher`. Here are some examples of reactive Java `Subscriber` implementations:
+
+#### BaseSubscriber
+
+The `BaseSubscriber` class from the Reactor library provides a base implementation of the `Subscriber` interface with additional methods for handling backpressure and other stream control.
+
+```java
+import reactor.core.publisher.BaseSubscriber;
+
+public class BaseSubscriberExample {
+    public static void main(String[] args) {
+        CustomSubscriber subscriber = new CustomSubscriber();
+
+        Flux.range(1, 10)
+            .subscribe(subscriber);
+    }
+}
+
+class CustomSubscriber extends BaseSubscriber<Integer> {
+    @Override
+    protected void hookOnNext(Integer value) {
+        System.out.println("Received: " + value);
+        if (value == 5) {
+            cancel(); // Cancels the subscription after receiving the value 5
+        }
+    }
+}
+```
+
+In this example, we create a custom `Subscriber` by extending the `BaseSubscriber` class. We override the `hookOnNext` method to process each emitted value. We also cancel the subscription when the value reaches 5 by calling the `cancel` method.
+
+#### LambdaSubscriber
+
+You can also use a lambda expression to define a `Subscriber` inline, without creating a custom class.
+
+```java
+import java.util.concurrent.Flow.*;
+
+public class LambdaSubscriberExample {
+    public static void main(String[] args) {
+        Subscriber<Integer> subscriber = new LambdaSubscriber<>(
+            System.out::println,
+            Throwable::printStackTrace,
+            () -> System.out.println("Completed")
+        );
+
+        Flux.range(1, 10)
+            .subscribe(subscriber);
+    }
+}
+```
+
+In this example, we use the `LambdaSubscriber` class, which is a helper class provided by the Java `Flow` API. We pass lambda expressions for the `onNext`, `onError`, and `onComplete` methods to define the behavior of the `Subscriber`.
+
 ### Subscription
 
-The `Subscription` represents the connection between a `Publisher` and a `Subscriber`. It provides methods for requesting items from the `Publisher`, canceling the subscription, and managing backpressure.
+The `Subscription` represents the connection between a `Publisher` and a `Subscriber`. It provides methods for requesting items from the `Publisher`, canceling the subscription, and managing backpressure. This allows the `Subscriber` to control the flow of data from the `Publisher`. Here are some examples of reactive Java `Subscription` usage:
+
+#### Requesting Elements
+
+The `request` method of the `Subscription` interface is used by the `Subscriber` to request a specific number of elements from the `Publisher`.
+
+```java
+import java.util.concurrent.Flow.*;
+
+public class SubscriptionExample {
+    public static void main(String[] args) {
+        Subscriber<Integer> subscriber = new CustomSubscriber();
+
+        Flux.range(1, 10)
+            .subscribe(subscriber);
+    }
+}
+
+class CustomSubscriber implements Subscriber<Integer> {
+    private Subscription subscription;
+
+    @Override
+    public void onSubscribe(Subscription subscription) {
+        this.subscription = subscription;
+        subscription.request(3); // Requesting three elements initially
+    }
+
+    @Override
+    public void onNext(Integer item) {
+        System.out.println("Received: " + item);
+        if (item == 3) {
+            subscription.request(2); // Requesting two more elements after receiving the third element
+        }
+    }
+
+    // Other methods
+}
+```
+
+In this example, the `onSubscribe` method of the `Subscriber` receives the `Subscription` object. We store the `Subscription` instance for later use. Then, we call `subscription.request(3)` to request three initial elements from the `Publisher`. In the `onNext` method, we check if the received item is 3, and then we call `subscription.request(2)` to request two more elements.
+
+#### Cancelling Subscription
+
+The `cancel` method of the `Subscription` interface is used by the `Subscriber` to cancel the subscription and stop receiving further elements.
+
+```java
+import java.util.concurrent.Flow.*;
+
+public class SubscriptionExample {
+    public static void main(String[] args) {
+        Subscriber<Integer> subscriber = new CustomSubscriber();
+
+        Flux.range(1, 10)
+            .subscribe(subscriber);
+    }
+}
+
+class CustomSubscriber implements Subscriber<Integer> {
+    private Subscription subscription;
+
+    @Override
+    public void onSubscribe(Subscription subscription) {
+        this.subscription = subscription;
+        subscription.request(Long.MAX_VALUE); // Requesting all elements
+    }
+
+    @Override
+    public void onNext(Integer item) {
+        System.out.println("Received: " + item);
+        if (item == 5) {
+            subscription.cancel(); // Cancelling subscription after receiving the fifth element
+        }
+    }
+
+    // Other methods
+}
+```
+
+In this example, we call `subscription.request(Long.MAX_VALUE)` in the `onSubscribe` method to request all elements from the `Publisher`. In the `onNext` method, we check if the received item is 5, and then we call `subscription.cancel()` to cancel the subscription.
 
 ### Operator
 
 Operators in reactive programming allow the transformation, filtering, and manipulation of the data stream. Operators can be applied to a `Publisher` to create a new `Publisher` that modifies the stream in some way. Common operators include `map`, `filter`, `flatMap`, `merge`, `concat`, and `reduce`.
+
+
 
 ### Backpressure
 
