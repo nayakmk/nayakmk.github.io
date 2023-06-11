@@ -6,7 +6,9 @@ date: '2023-06-11 14:32:50 +0530'
 
 In Reactive Java, there are several side-effect operators available that allow you to perform actions or introduce side-effects at different points in the reactive stream. Here are some commonly used side-effect operators:
 
-1. `doOnNext`: The `doOnNext` operator allows you to perform an action for each item emitted by the stream, without modifying the item or the stream itself.
+### `doOnNext`
+
+The `doOnNext` operator allows you to perform an action for each item emitted by the stream, without modifying the item or the stream itself.
 
 ```java
 Flux.range(1, 5)
@@ -14,7 +16,9 @@ Flux.range(1, 5)
     .subscribe();
 ```
 
-2. `doOnError`: The `doOnError` operator allows you to perform an action when an error occurs in the stream.
+### `doOnError`
+
+The `doOnError` operator allows you to perform an action when an error occurs in the stream.
 
 ```java
 Flux.range(1, 5)
@@ -28,7 +32,9 @@ Flux.range(1, 5)
     .subscribe();
 ```
 
-3. `doOnComplete`: The `doOnComplete` operator allows you to perform an action when the stream completes successfully.
+### `doOnComplete`
+
+The `doOnComplete` operator allows you to perform an action when the stream completes successfully.
 
 ```java
 Flux.range(1, 5)
@@ -36,7 +42,9 @@ Flux.range(1, 5)
     .subscribe();
 ```
 
-4. `doOnSubscribe` and `doOnCancel`: The `doOnSubscribe` operator allows you to perform an action when the stream is subscribed to, while the `doOnCancel` operator allows you to perform an action when the subscription is canceled.
+### `doOnSubscribe` and `doOnCancel`
+
+The `doOnSubscribe` operator allows you to perform an action when the stream is subscribed to, while the `doOnCancel` operator allows you to perform an action when the subscription is canceled.
 
 ```java
 Flux.range(1, 5)
@@ -46,4 +54,23 @@ Flux.range(1, 5)
     .dispose(); // Cancels the subscription
 ```
 
-These side-effect operators provide a way to inject actions or perform additional operations at different points in the reactive stream. They are useful for logging, monitoring, resource management, or other side-effects that you may need in your application. However, it's important to use them judiciously, as excessive use of side-effects can reduce the clarity and maintainability of your code.
+### `doOnEach`
+
+The `doOnEach` operator allows you to perform an action for each item emitted by a reactive stream, including signals such as `onNext`, `onError`, and `onComplete`. It is a versatile operator that allows you to add side-effects or perform additional operations at different points in the stream.
+
+```java
+Flux.range(1, 5)
+    .doOnEach(signal -> {
+        if (signal.getType() == SignalType.ON_NEXT) {
+            int item = signal.get();
+            System.out.println("Received item: " + item);
+        } else if (signal.getType() == SignalType.ON_ERROR) {
+            Throwable error = signal.getThrowable();
+            System.out.println("Error occurred: " + error.getMessage());
+        } else if (signal.getType() == SignalType.ON_COMPLETE) {
+            System.out.println("Stream completed");
+        }
+    })
+    .subscribe();
+```
+
