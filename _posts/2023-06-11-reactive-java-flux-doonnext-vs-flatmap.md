@@ -8,8 +8,9 @@ date: '2023-06-11 13:55:55 +0530'
 
 `doOnNext` and `flatMap` are two different operators in Reactive Java, specifically in the context of the Project Reactor library. Here's an explanation of each operator and their differences:
 
-1. `doOnNext` Operator:
-  The `doOnNext` operator is a side-effect operator in Reactive Java. It allows you to perform a specific action or operation for each emitted item in the stream without modifying the stream itself. It is primarily used for logging, monitoring, or triggering side effects.
+### `doOnNext` Operator
+
+The `doOnNext` operator is a side-effect operator in Reactive Java. It allows you to perform a specific action or operation for each emitted item in the stream without modifying the stream itself. It is primarily used for logging, monitoring, or triggering side effects.
 
 **Example**:
 ```java
@@ -19,8 +20,9 @@ Flux.range(1, 5)
 ```
 In this example, the `doOnNext` operator logs each item before it is passed down the stream.
 
-2. `flatMap` Operator:
-  The `flatMap` operator is a transformation operator in Reactive Java. It is used to transform each item emitted by a publisher into another publisher or a sequence of publishers, allowing for the creation of complex data flows and asynchronous operations.
+### `flatMap` Operator
+
+The `flatMap` operator is a transformation operator in Reactive Java. It is used to transform each item emitted by a publisher into another publisher or a sequence of publishers, allowing for the creation of complex data flows and asynchronous operations.
 
 **Example**:
 ```java

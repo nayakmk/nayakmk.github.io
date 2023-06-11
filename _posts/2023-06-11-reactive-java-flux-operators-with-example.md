@@ -8,8 +8,9 @@ date: '2023-06-11 14:00:17 +0530'
 
 Here are some commonly used operators in Reactive Java's `Flux` class, along with examples of how they can be used:
 
-1. `map` Operator:
-  The `map` operator allows you to transform each item emitted by a `Flux` by applying a function to it.
+### `map` Operator
+
+The `map` operator allows you to transform each item emitted by a `Flux` by applying a function to it.
 
 Example:
 ```java
@@ -26,8 +27,9 @@ Output:
 10
 ```
 
-2. `filter` Operator:
-  The `filter` operator allows you to selectively emit items from a `Flux` based on a predicate.
+### `filter` Operator
+
+The `filter` operator allows you to selectively emit items from a `Flux` based on a predicate.
 
 Example:
 ```java
@@ -41,8 +43,9 @@ Output:
 4
 ```
 
-3. `take` Operator:
-  The `take` operator allows you to limit the number of items emitted by a `Flux`.
+### `take` Operator
+
+The `take` operator allows you to limit the number of items emitted by a `Flux`.
 
 Example:
 ```java
@@ -57,8 +60,9 @@ Output:
 3
 ```
 
-4. `flatMap` Operator:
-  The `flatMap` operator allows you to transform each item emitted by a `Flux` into a sequence of publishers, and then flatten the resulting sequences into a single `Flux`.
+### `flatMap` Operator
+
+The `flatMap` operator allows you to transform each item emitted by a `Flux` into a sequence of publishers, and then flatten the resulting sequences into a single `Flux`.
 
 Example:
 ```java
@@ -76,8 +80,9 @@ Output:
 6
 ```
 
-5. `concatWith` Operator:
-  The `concatWith` operator allows you to concatenate two `Flux` instances together, emitting the items from the first `Flux` followed by the items from the second `Flux`.
+### `concatWith` Operator
+
+The `concatWith` operator allows you to concatenate two `Flux` instances together, emitting the items from the first `Flux` followed by the items from the second `Flux`.
 
 Example:
 ```java
@@ -96,5 +101,3 @@ Output:
 5
 6
 ```
-
-These are just a few examples of the many operators available in the `Flux` class of Reactive Java. These operators enable you to perform various transformations, filtering, limiting, and combining operations on the emitted items, allowing you to manipulate and process the data stream in a reactive and declarative manner.
