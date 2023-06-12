@@ -8,7 +8,7 @@ tags: [reactive, java]
 
 ## Types of Functions
 
-In Reactive Java, the types of functions are similar to those in functional Java, but they often have specific names and purposes within the reactive programming paradigm. Here are some common types of functions used in Reactive Java:
+In Reactive Java, the types of functions are similar to those in functional Java, but they often have specific names and purposes within the reactive programming paradigm. Here are some common types of functions used in Reactive Java
 
 ### `Function<T, R>`
 
