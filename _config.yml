@@ -89,13 +89,13 @@ toc: true
 # mermaid: true 
 
 comments:
-  active:  false       # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active: giscus       # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   disqus:
     shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
-    repo:         # <gh-username>/<repo>
+    repo:  nayakmk/nayakmk.github.io       # <gh-username>/<repo>
     issue_term:   # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
@@ -114,7 +114,7 @@ assets:
     enabled: true     # boolean, keep empty means false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
-    env: development         # [development|production]
+    env: production         # [development|production]
 
 pwa:
   enabled: true   # the option for PWA feature
