@@ -8,7 +8,9 @@ tags: [postgresql, database, docker]
 
 ## Docker Command
 
->  docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres
+```shell
+docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres
+```
 
 ```shell
 The files belonging to this database system will be owned by user "postgres".
