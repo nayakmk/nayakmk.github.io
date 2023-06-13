@@ -51,3 +51,4 @@ docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 scarfacede
 ### Reference
 
 1. https://www.capitalone.com/tech/cloud/automating-partitioning/
+2. https://access.crunchydata.com/documentation/pg-partman/2.6.3/pg_partman/
