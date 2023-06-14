@@ -2,8 +2,8 @@
 layout: post
 title: 'Reactive Java: Flux to Mono'
 date: '2023-06-14 23:27:31 +0530'
-categories: [JAVA,REACTIVE]
-tags: [reactive, mono, flux, reactor]
+categories: [GIT]
+tags: [commands]
 ---
 
 To convert a reactive Flux into a Mono, you can use operators such as `single()`, `next()`, or `last()`. These operators allow you to extract a single value from the Flux and convert it into a Mono. Here are some examples:

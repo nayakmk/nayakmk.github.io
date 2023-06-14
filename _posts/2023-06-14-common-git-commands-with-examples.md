@@ -2,6 +2,8 @@
 layout: post
 title: 'Git: Common Commands with Examples'
 date: '2023-06-14 23:37:02 +0530'
+categories: [GIT]
+tags: [commands]
 ---
 
 Here are some common Git commands with examples to illustrate their usage:
