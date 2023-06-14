@@ -2,6 +2,8 @@
 layout: post
 title: 'Git: Add all changes to commit with Examples'
 date: '2023-06-14 23:43:48 +0530'
+categories: [GIT]
+tags: [command]
 ---
 
 To add all changes to a commit in Git, you can use the following command:
