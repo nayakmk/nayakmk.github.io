@@ -75,9 +75,7 @@ In this example, if an error occurs when processing the element with the value 3
 
 Error handling techniques in Reactive Java offer several benefits:
 
-1. **Graceful Failure**: Error handling techniques allow your application to gracefully
-
- handle failures and provide fallback mechanisms.
+1. **Graceful Failure**: Error handling techniques allow your application to gracefully handle failures and provide fallback mechanisms.
 
 2. **Fault Isolation**: Reactive Java's error handling operators help isolate errors and prevent them from propagating further downstream, ensuring that other parts of your application are not affected.
 
