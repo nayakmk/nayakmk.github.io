@@ -135,7 +135,7 @@ Flux.range(1, 10)
 The output of the above code will be:
 
 ```
-Group: [1, 2]
+Group: [1, 2, 3]
 Group: [4, 5, 6]
 Group: [7, 8, 9]
 Group: [10]
