@@ -32,6 +32,17 @@ Flux.range(1, 5)
 
 In this example, the `log()` operator is used after the `range()` operator to log events in the reactive stream. By default, it logs all the events, including subscription, onNext, onError, and onComplete.
 
+```
+[ INFO] (main) | onSubscribe([Synchronous Fuseable] FluxRange.RangeSubscription)
+[ INFO] (main) | request(unbounded)
+[ INFO] (main) | onNext(1)
+[ INFO] (main) | onNext(2)
+[ INFO] (main) | onNext(3)
+[ INFO] (main) | onNext(4)
+[ INFO] (main) | onNext(5)
+[ INFO] (main) | onComplete()
+```
+
 You can customize the log output by providing additional parameters to the `log()` operator. For example:
 
 ```java
@@ -46,47 +57,19 @@ You can also log specific events by specifying the `SignalType`:
 
 ```java
 Flux.range(1, 5)
-    .log("CustomLogger", SignalType.ON_NEXT)
-    .subscribe();
+        .log("CustomLogger", Level.WARNING, SignalType.ON_NEXT)
+        .subscribe();
 ```
 
 This will only log the onNext events.
 
-### RxJava
-
-Here's an example of using the Log operator in RxJava:
-
-```java
-import io.reactivex.rxjava3.core.Flowable;
-
-Flowable.range(1, 5)
-    .doOnNext(System.out::println)
-    .log()
-    .subscribe();
 ```
-
-In this example, the `log()` operator is used after the `range()` operator to log events in the reactive stream. By default, it logs all the events, including subscription, onNext, onError, and onComplete.
-
-You can customize the log output by providing additional parameters to the `log()` operator. For example:
-
-```java
-Flowable.range(1, 5)
-    .log("CustomLogger")
-    .subscribe();
+[ WARN] (main) | onNext(1)
+[ WARN] (main) | onNext(2)
+[ WARN] (main) | onNext(3)
+[ WARN] (main) | onNext(4)
+[ WARN] (main) | onNext(5)
 ```
-
-This will prefix the log output with the specified "CustomLogger" string.
-
-You can also log specific events by specifying the `Logger`:
-
-```java
-Flowable.range(1, 5)
-    .log(System.out::println)
-    .subscribe();
-```
-
-This will log events using the provided logger function.
-
 ## Conclusion
 
 The Log operator in Reactive Java is a valuable tool for logging events and data as they flow through the reactive stream. It allows you to gain insights into the behavior of your reactive application and helps in troubleshooting and monitoring. By using the Log operator effectively, you can improve the observability of your reactive code and streamline the development process.
