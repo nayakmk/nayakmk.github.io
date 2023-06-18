@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Reactive Java: Logging in Reactive Java using the Log Operator'
+title: 'Reactive Java: Logging using the Log Operator'
 date: '2023-06-17 11:05:25 +0530'
 categories: [Reactive Java]
 tags: [Java, Reactive Programming, Logging]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Reactive Java: Parallel Processing in Reactive Java'
+title: 'Reactive Java: Parallel Processing'
 date: '2023-06-17 12:42:59 +0530'
 categories: [Reactive Java]
 tags: [Java, Reactive Programming, Parallel Processing]

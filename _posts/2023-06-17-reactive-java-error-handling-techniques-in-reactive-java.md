@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Reactive Java: Error Handling Techniques in Reactive Java'
+title: 'Reactive Java: Error Handling Techniques'
 date: '2023-06-17 11:09:36 +0530'
 categories: [Reactive Java]
 tags: [Java, Reactive Programming, Error Handling]

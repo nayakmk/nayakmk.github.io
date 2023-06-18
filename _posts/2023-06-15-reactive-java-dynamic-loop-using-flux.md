@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Reactive Java: Dynamic Loop using Flux'
+title: 'Reactive Java: Dynamic Loop using Flux expand'
 date: '2023-06-15 01:14:22 +0530'
 categories: [JAVA,REACTIVE]
 tags: [reactive, mono, flux, reactor]

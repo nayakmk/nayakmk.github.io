@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Spring WebFlux: Error Handling and Fallback in WebFlux with Reactive Java'
+title: 'Reactive Java: Error Handling and Fallback in WebFlux'
 date: '2023-06-17 19:28:51 +0530'
 categories: [Reactive Java, WebFlux]
 tags: [Java, Reactive Programming, Web Development, Error Handling]

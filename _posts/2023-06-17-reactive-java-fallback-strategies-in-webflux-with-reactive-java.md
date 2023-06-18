@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fallback Strategies in WebFlux with Reactive Java
+title: 'Reactive Java: Fallback Strategies in WebFlux'
 date: '2023-06-17 19:36:04 +0530'
 categories: [Reactive Java, WebFlux]
 tags: [Java, Reactive Programming, Web Development, Fallback]

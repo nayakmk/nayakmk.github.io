@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'Reactive Java: Parallel Processing with PublishOn and SubscribeOn in Reactive
-  Java'
+title: 'Reactive Java: Parallel Processing with PublishOn and SubscribeOn'
 date: '2023-06-17 12:49:25 +0530'
 categories: [Reactive Java]
 tags: [Java, Reactive Programming, Parallel Processing]

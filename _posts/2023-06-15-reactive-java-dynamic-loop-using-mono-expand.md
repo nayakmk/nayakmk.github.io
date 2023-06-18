@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Reactive Java: Dynamic Loop using Mono clear'
+title: 'Reactive Java: Dynamic Loop using Mono expand'
 date: '2023-06-15 18:20:09 +0530'
 categories: [Reactive Java]
 tags: [Java, Reactive Programming, Mono, Expand, Dynamic Loops]

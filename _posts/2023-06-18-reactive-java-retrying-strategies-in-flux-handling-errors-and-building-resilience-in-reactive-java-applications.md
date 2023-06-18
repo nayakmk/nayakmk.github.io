@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'Retrying Strategies in Flux: Handling Errors and Building Resilience in Reactive
-  Java Applications'
+title: 'Reactive Java: Handling Errors'
 date: '2023-06-18 09:26:14 +0530'
 categories: [Reactive Java, Flux]
 tags: [Java, Reactive Programming, Web Development, Flux]
@@ -10,7 +9,7 @@ tags: [Java, Reactive Programming, Web Development, Flux]
 
 In Reactive Java, Flux is a powerful component for working with streams of data. When dealing with potentially failing operations, it's important to implement retry strategies to handle errors and build resilience into your applications. Flux provides several operators that allow you to implement different retry scenarios and backoff strategies.
 
-In this post, we will explore different retry scenarios using operators like `retry`, `retryWhen`, `backOff`, and `repeat` in Flux. We will also provide examples to demonstrate their usage.
+In this post, we will explore different retry scenarios using operators like `retry`, `retryWhen`, and `repeat` in Flux. We will also provide examples to demonstrate their usage.
 
 ## Retry Operator
 

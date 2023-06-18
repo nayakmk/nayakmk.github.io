@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rate Limiting in WebFlux with Reactive Java
+title: 'Reactive Java: Rate Limiting in WebFlux'
 date: '2023-06-17 20:41:13 +0530'
 categories: [Reactive Java, WebFlux]
 tags: [Java, Reactive Programming, Web Development, Rate Limiting]

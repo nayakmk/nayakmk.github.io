@@ -3,7 +3,7 @@ layout: post
 title: 'Reactive Java: Flux - Operators with Example'
 date: '2023-06-11 14:00:17 +0530'
 categories: [JAVA,REACTIVE]
-tags: [reactive, java]
+tags: [reactive, java, take, filter, map, flatMap, concatWith, reduce, zip, merge]
 ---
 
 Here are some commonly used operators in Reactive Java's `Flux` class, along with examples of how they can be used:
@@ -188,4 +188,4 @@ The output of the above code will be:
 6
 ```
 
-As you can see, the elements from both `Publishers` are merged into a single stream using the `merge`
+As you can see, the elements from both `Publishers` are merged into a single stream using the `merge`.

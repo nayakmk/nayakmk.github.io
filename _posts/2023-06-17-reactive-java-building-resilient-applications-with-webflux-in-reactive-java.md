@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building Resilient Applications with WebFlux in Reactive Java
+title: 'Reactive Java: Building Resilient Applications with WebFlux'
 date: '2023-06-17 19:45:22 +0530'
 categories: [Reactive Java, WebFlux]
 tags: [Java, Reactive Programming, Web Development, Resilience]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Reactive Java: Grouping Data in Reactive Java with Group By'
+title: 'Reactive Java: Grouping Data with Group By'
 date: '2023-06-17 07:54:25 +0530'
 categories: [Reactive Java]
 tags: [Java, Reactive Programming, Group By]

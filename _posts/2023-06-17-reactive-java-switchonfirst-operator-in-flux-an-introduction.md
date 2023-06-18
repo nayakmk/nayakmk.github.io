@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'SwitchOnFirst Operator in Flux: An Introduction'
+title: 'Reactive Java: SwitchOnFirst Operator in Flux'
 date: '2023-06-17 20:52:16 +0530'
 categories: [Reactive Java, Flux]
 tags: [Java, Reactive Programming, Web Development, Flux]

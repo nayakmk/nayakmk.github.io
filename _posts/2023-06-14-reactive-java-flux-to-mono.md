@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Converting a Flux to Mono in Reactive Java'
+title: 'Reactive Java: Converting a Flux to Mono'
 date: '2023-06-14 23:27:31 +0530'
 categories: [Reactive Java]
 tags: [Java, Reactive Programming, Flux, Mono, Conversion]

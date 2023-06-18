@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flux Resource Handling in Reactive Java
+title: 'Reactive Java: Flux Resource Handling'
 date: '2023-06-17 20:43:54 +0530'
 categories: [Reactive Java, Flux]
 tags: [Java, Reactive Programming, Web Development, Flux]
