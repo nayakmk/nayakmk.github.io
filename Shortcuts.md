@@ -17,8 +17,17 @@ bundle exec jekyll post "Microservices: Outbox Pattern" --timestamp-format "%Y-%
 
 ## Running Locally
 
+bundle exec jekyll s
+
 jekyll server --watch
 
 ### With Drafts
 
 jekyll server --drafts --watch
+
+
+## Link Post
+
+https://github.com/MichaelCurrin/dev-cheatsheets/blob/master/cheatsheets/jekyll/templating/links.md?plain=1
+
+[Link Text]({% post_url 2023-06-18-reactive-java-understanding-flux-window-and-windowtimeout-operators %})
