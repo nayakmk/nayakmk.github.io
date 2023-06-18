@@ -2,7 +2,8 @@
 layout: post
 title: 'Blocking the Main Thread in Java'
 date: '2023-06-18 16:13:50 +0530'
-Blocking the Main Thread in Java
+categories: [Java, Multithreading]
+tags: [Java, Multithreading, Concurrency]
 ---
 ## Introduction
 
