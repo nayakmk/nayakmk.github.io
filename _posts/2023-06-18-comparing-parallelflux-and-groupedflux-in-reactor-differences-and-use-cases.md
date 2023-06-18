@@ -65,8 +65,6 @@ Advantages of GroupedFlux:
 
 In this post, we compared `ParallelFlux` and `GroupedFlux` in Reactor. We discussed their differences, advantages, and use cases. `ParallelFlux` is suitable for parallel execution of tasks in a reactive stream, especially for CPU-bound or concurrent operations. On the other hand, `GroupedFlux` is designed for grouping items by a specific key, making it useful for data aggregation and analysis.
 
-By understanding the characteristics and use cases
-
- of `ParallelFlux` and `GroupedFlux`, you can leverage the power of Reactor to handle concurrency and data grouping effectively in your Java applications. Experiment with these features and choose the appropriate type based on your application's requirements.
+By understanding the characteristics and use cases of `ParallelFlux` and `GroupedFlux`, you can leverage the power of Reactor to handle concurrency and data grouping effectively in your Java applications. Experiment with these features and choose the appropriate type based on your application's requirements.
 
 Remember to consider factors like the nature of your tasks, performance considerations, and the desired level of concurrency or grouping when selecting the appropriate approach for your use case.
