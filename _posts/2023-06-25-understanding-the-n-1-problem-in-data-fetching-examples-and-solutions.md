@@ -6,7 +6,7 @@ categories: [Database, Performance]
 tags: [N+1 Problem, Database, Performance, Optimization]
 ---
 
-When working with databases and retrieving data, you may encounter a performance issue known as the N+1 problem. In this post, we'll explore what the N+1 problem is, provide examples to illustrate it, and discuss potential solutions to mitigate its impact. Let's dive in!
+When working with databases and retrieving data, you may encounter a performance issue known as the `N+1` problem. In this post, we'll explore what the N+1 problem is, provide examples to illustrate it, and discuss potential solutions to mitigate its impact. Let's dive in!
 
 ## What is the N+1 Problem?
 
