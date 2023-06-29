@@ -4,7 +4,7 @@ title: 'Managing Secrets and Configuration in AWS: Parameter Store, Secrets Mana
   Key Management Service, and Certificate Manager'
 date: '2023-06-26 22:14:53 +0530'
 categories: [AWS, Parameter Store, Secrets Manager, Key Management Service, Certificate Manager]
-tags: [AWS, Parameter Store, Secrets Manager, Key Management Service, Certificate Manager, Security, Configuration, Tags, Category]
+tags: [AWS, Parameter Store, Secrets Manager, Key Management Service, Certificate Manager, Security, Configuration]
 ---
 
 In this post, we will explore different AWS services that help you manage secrets, configuration settings, encryption keys, and SSL/TLS certificates. We'll cover AWS Parameter Store, Secrets Manager, Key Management Service (KMS), and Certificate Manager, along with their features and usage.

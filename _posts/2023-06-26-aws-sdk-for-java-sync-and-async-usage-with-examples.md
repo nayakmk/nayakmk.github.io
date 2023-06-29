@@ -3,7 +3,7 @@ layout: post
 title: AWS SDK for Java - Sync and Async Usage with Examples
 date: '2023-06-26 22:53:33 +0530'
 categories: [AWS, Java]
-tags: [AWS, SDK, Java, Examples, Tags, Category]
+tags: [AWS, SDK, Java]
 ---
 
 In this post, we will explore the AWS SDK for Java and its usage for both synchronous (sync) and asynchronous (async) programming styles. The AWS SDK for Java provides a comprehensive set of APIs and libraries that allow developers to build applications that integrate with various AWS services.

@@ -3,7 +3,7 @@ layout: post
 title: AWS S3 CLI Commands - Usage and Examples
 date: '2023-06-26 22:36:01 +0530'
 categories: [AWS, S3]
-tags: [AWS, S3, CLI, Command Line, Tags, Category]
+tags: [AWS, S3, CLI, Command Line]
 ---
 
 In this post, we will explore various AWS S3 CLI commands that can be used to interact with Amazon S3 buckets and objects. The AWS CLI provides a convenient and powerful way to manage your S3 resources from the command line.

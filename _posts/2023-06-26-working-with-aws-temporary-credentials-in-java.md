@@ -3,7 +3,7 @@ layout: post
 title: Working with AWS Temporary Credentials in Java
 date: '2023-06-26 22:13:44 +0530'
 categories: [AWS, Temporary Credentials]
-tags: [AWS, Temporary Credentials, Java, Security, Tags, Category]
+tags: [AWS, Temporary Credentials, Java, Security]
 ---
 
 In this post, we will explore how to work with AWS temporary credentials in a Java application. AWS temporary credentials provide short-term access to AWS services, allowing you to securely authenticate and authorize your application without using long-term access keys.

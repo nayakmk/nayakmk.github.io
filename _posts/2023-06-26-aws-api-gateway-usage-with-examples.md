@@ -3,7 +3,7 @@ layout: post
 title: AWS API Gateway - Usage with Examples
 date: '2023-06-26 23:07:34 +0530'
 categories: [AWS, API Gateway]
-tags: [AWS, API Gateway, Examples, Tags, Category]
+tags: [AWS, API Gateway]
 ---
 
 In this post, we will explore the AWS API Gateway service and its usage for building and managing APIs in the AWS cloud. API Gateway enables you to create, deploy, and manage RESTful APIs, WebSocket APIs, and HTTP APIs to connect and integrate various AWS services and external systems.

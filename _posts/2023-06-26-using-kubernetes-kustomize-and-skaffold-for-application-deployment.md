@@ -3,7 +3,7 @@ layout: post
 title: Using Kubernetes Kustomize and Skaffold for Application Deployment
 date: '2023-06-26 09:58:22 +0530'
 categories: [Kubernetes, Kustomize, Skaffold]
-tags: [Kubernetes, Kustomize, Skaffold, Deployment, Tags, Category]
+tags: [Kubernetes, Kustomize, Skaffold, Deployment]
 ---
 
 In this post, we will explore how to use Kubernetes Kustomize and Skaffold to streamline the deployment of applications. We will leverage the power of Kustomize to manage configuration overlays, and Skaffold for a seamless development and deployment workflow.
