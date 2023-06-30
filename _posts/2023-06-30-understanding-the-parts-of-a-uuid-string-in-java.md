@@ -50,11 +50,11 @@ public class UUIDPartsExtractor {
 
 Output:
 ```
-Time-low: e89b12d3a4564266
-Time-mid: 123e
-Time-high-and-version: 7
-Variant: 4
-Clock sequence: 55440000
+Time-low: a4564266
+Time-mid: 5544
+Time-high-and-version: 123e
+Variant: 2
+Clock sequence: 123e4567e89b12d3
 ```
 
 ## Explanation
