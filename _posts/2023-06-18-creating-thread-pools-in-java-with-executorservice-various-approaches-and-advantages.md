@@ -89,9 +89,7 @@ public class Main {
 ```
 
 Advantages:
-- CachedThreadPool
-
- is suitable for scenarios with a large number of short-lived tasks or tasks with varying workload.
+- CachedThreadPool is suitable for scenarios with a large number of short-lived tasks or tasks with varying workload.
 - It dynamically adjusts the pool size based on the current workload, leading to efficient resource utilization.
 
 ## Approach 3: WorkStealingPool

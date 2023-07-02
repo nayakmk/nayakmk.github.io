@@ -72,9 +72,7 @@ public class Main {
 
 In this example, we create a cached thread pool using the `Executors.newCachedThreadPool()` method. This type of thread pool is suitable for I/O-bound tasks as it can dynamically adjust the number of threads based on the workload. We submit I/O-bound tasks to the thread pool using the `execute()` method, and each task is executed by one of the threads from the pool.
 
-## Reactive Thread
-
- Pools
+## Reactive Thread Pools
 
 ### Using Project Reactor for Compute-Bound Tasks
 
