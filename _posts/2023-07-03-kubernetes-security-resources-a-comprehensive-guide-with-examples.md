@@ -67,7 +67,7 @@ spec:
 
 In the above example, we define a Pod Security Policy named `my-podsecuritypolicy` that disallows privileged containers and privilege escalation.
 
----
+## Conclusion
 
 In this post, we explored the key security resources in Kubernetes, including RBAC, Network Policies, and Pod Security Policies. We provided example YAML configurations to demonstrate their usage in securing your Kubernetes cluster and workloads.
 

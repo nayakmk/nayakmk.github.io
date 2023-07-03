@@ -107,7 +107,7 @@ In the above example, we define a StatefulSet
 
  named `my-app` with 3 replicas. It uses a PersistentVolumeClaim template named `my-pv` to request 1Gi of storage from the `fast` StorageClass.
 
----
+## Conclusion
 
 In this post, we explored the key storage resources provided by Kubernetes, including PersistentVolume, PersistentVolumeClaim, StorageClass, and StatefulSet. We also provided examples of their usage to help you understand how to configure storage for your applications in Kubernetes.
 

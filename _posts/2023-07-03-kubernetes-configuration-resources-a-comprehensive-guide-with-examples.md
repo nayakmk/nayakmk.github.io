@@ -72,7 +72,7 @@ spec:
 
 In the above example, we define a ResourceQuota named `my-resourcequota` with limits set for the number of pods, CPU, and memory.
 
----
+## Conclusion
 
 In this post, we explored the key configuration resources in Kubernetes, including ConfigMap, Secret, ServiceAccount, and ResourceQuota. We provided example YAML configurations to demonstrate their usage in managing configuration data, secrets, service identities, and resource limits.
 

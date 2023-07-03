@@ -101,8 +101,6 @@ In the above example, the Service named `my-service` of type LoadBalancer expose
 
 ## Conclusion
 
-Networking is a crucial aspect of Kubernetes, and understanding the available networking resources is essential for building scalable
-
- and resilient applications. In this post, we explored some of the key networking resources provided by Kubernetes, including Service, Ingress, Network Policy, and LoadBalancer. We also provided examples to illustrate their usage.
+Networking is a crucial aspect of Kubernetes, and understanding the available networking resources is essential for building scalable and resilient applications. In this post, we explored some of the key networking resources provided by Kubernetes, including Service, Ingress, Network Policy, and LoadBalancer. We also provided examples to illustrate their usage.
 
 By leveraging these networking resources, you can ensure reliable communication between pods, control access to services, and expose your applications to external traffic effectively.
