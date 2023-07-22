@@ -8,7 +8,7 @@ categories: [Technology]
 
 When dealing with digital data, it's important to understand data volume units and their calculations. Data volume units are used to quantify the size of files, storage capacity, and data transfer rates. However, there are two different systems of measuring data volume: powers of two and powers of ten. In this post, we will focus on the powers of two system, which uses binary prefixes. We will explore the most common data volume units, such as bytes, kibibytes (KiB), mebibytes (MiB), gibibytes (GiB), tebibytes (TiB), and pebibytes (PiB). Let's take a look at these units and their calculations in a tabular format.
 
-## Data Volume Units in Powers of Two
+## Data Volume Units
 
 | Unit (in Powers of Two)        |Size in Bytes (in Powers of Two) |  Unit (in Powers of Ten)        |Size in Bytes (in Powers of Ten) |
 |--------------|----------------------------------|--------------|----------------------------------|
